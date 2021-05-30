@@ -1,0 +1,36 @@
+﻿@model StudentManageDotnet.Models.Course
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="color:crimson">Details</h2>
+
+<div>
+    <h4 style="background-color:aquamarine">Course</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.LabelFor(model => model.course1, "Course", htmlAttributes: new { @class = "control-label col-md-2" })
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.course1)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.duration, "Duration", htmlAttributes: new { @class = "control-label col-md-2" })
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,36 @@
+﻿@model StudentManageDotnet.Models.Batch
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="color:crimson">Details</h2>
+
+<div>
+    <h4 style="background-color:aquamarine">Batch</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.LabelFor(model => model.batch1, "Batch", htmlAttributes: new { @class = "control-label col-md-2" })
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.batch1)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.year, "Year", htmlAttributes: new { @class = "control-label col-md-2" })
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.year)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
